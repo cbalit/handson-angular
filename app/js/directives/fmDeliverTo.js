@@ -8,5 +8,5 @@ foodMeApp.directive('fmDeliverTo', function() {
     controller: function FmDeliverToController($scope, customer) {
       $scope.customer = customer;
     }
-  }
+  };
 });

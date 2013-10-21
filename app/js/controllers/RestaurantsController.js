@@ -3,10 +3,11 @@
 foodMeApp.controller('RestaurantsController',
     function RestaurantsController($scope, customer, $location, Restaurant) {
 
-        if (!customer.address) {
-            $location.url('/customer');
-        }
+  if (!customer.address) {
+    $location.url('/customer');
+  }
 
-        $scope.restaurants = Restaurant.query();
+  $scope.restaurants = Restaurant.query();
+  $scope.customer = customer;
 
-    });
+});

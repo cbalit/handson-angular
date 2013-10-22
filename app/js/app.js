@@ -1,6 +1,6 @@
 'use strict';
 
-var foodMeApp = angular.module('foodMeApp', ['ngRoute']);
+var foodMeApp = angular.module('foodMeApp', ['ngRoute','ngAnimate']);
 
 foodMeApp.config(function($routeProvider) {
 

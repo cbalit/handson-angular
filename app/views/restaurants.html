@@ -1,6 +1,11 @@
 <div class="breadcrumb fm-deliver-to">
-    Deliver to: Placeholder street 23, Town of Placeholder, 98765
-    <a href="#/customer" class="pull-right">Change</a>
+    <span >
+        Deliver to: <span class="animate-show" ng-show="deliveryIsVisible">Placeholder street 23, Town of Placeholder, 98765
+            <a class="pull-right" ng-click="hideDelivery()">Hide</a>
+            <a href="#/customer" class="pull-right">Change</a>
+        </span>
+        <a ng-hide="deliveryIsVisible"  ng-click="showDelivery()">Show</a>
+    </span>
 </div>
 
 

@@ -32,4 +32,13 @@ foodMeApp.controller('RestaurantsController',
             }
         ];
 
+        $scope.deliveryIsVisible=true;
+
+        $scope.hideDelivery = function (){
+            $scope.deliveryIsVisible=false;
+        };
+
+        $scope.showDelivery = function (){
+            $scope.deliveryIsVisible=true;
+        };
 });

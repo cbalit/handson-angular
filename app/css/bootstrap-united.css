@@ -4972,6 +4972,7 @@ a.badge:hover {
 }
 .pull-right {
   float: right;
+  padding-left:10px;
 }
 .pull-left {
   float: left;

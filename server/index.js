@@ -4,7 +4,8 @@ var open = require('open');
 
 var RestaurantRecord = require('./model').Restaurant;
 var MemoryStorage = require('./storage').Memory;
-
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
 var API_URL = '/api/restaurant';
 var API_URL_ID = API_URL + '/:id';
 var API_URL_ORDER = '/api/order';
@@ -27,13 +28,13 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE) {
   var storage = new MemoryStorage();
 
   // log requests
-  app.use(express.logger('dev'));
+  app.use(morgan('dev'));
 
   // serve static files for demo client
   app.use(express.static(STATIC_DIR));
 
   // parse body into req.body
-  app.use(express.bodyParser());
+  app.use(bodyParser());
 
 
   // API
